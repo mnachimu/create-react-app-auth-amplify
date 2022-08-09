@@ -9,6 +9,9 @@ function Upload() {
     event.preventDefault();
     let file = fileInput.current.files[0];
     let newFileName = fileInput.current.files[0].name.replace(/\..+$/, "");
+    console.log(process.env.USER_BRANCH);
+    console.log(process.env.AK);
+    console.log(process.env.SC);
     const config = {
       bucketName: 'testbucket-762673298322',
       dirName: process.env.REACT_APP_DIR_NAME /* optional */,
