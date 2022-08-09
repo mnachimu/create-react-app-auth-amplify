@@ -52,7 +52,7 @@ function Upload() {
     };
 
     console.log("printing config");
-    const ReactS3Client = new S3(config);
+//    const ReactS3Client = new S3(config);
 //    ReactS3Client.uploadFile(file, newFileName).then((data) => {
 //      console.log(data);
 //      if (data.status === 204) {
@@ -64,7 +64,7 @@ function Upload() {
 //        alert(err);
 //        console.log(err);
 //    });
-    console.log(newFileName);
+//    console.log(newFileName);
     console.log(textInput);
 //  };
   return (
