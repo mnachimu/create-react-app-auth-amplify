@@ -10,9 +10,9 @@ function Upload() {
 
   const handleClick = (event) => {
 //  console.log("something");
-//    event.preventDefault();
-//    let file = fileInput.current.files[0];
-//    let newFileName = fileInput.current.files[0].name.replace(/\..+$/, "");
+    event.preventDefault();
+    let file = fileInput.current.files[0];
+    let newFileName = fileInput.current.files[0].name.replace(/\..+$/, "");
 //    console.log(process.env.USER_BRANCH);
 //    console.log(process.env.AK);
 //    console.log(process.env.SC);
@@ -34,9 +34,13 @@ function Upload() {
 //        });
     var myBucket = 'testbucket-347985515607';
 
-    var myKey = 'text';
+//    var myKey = 'text';
+    var params = {
+      Body: newFileName,
+      Bucket: myBucket,
+      Key: file
+     };
     console.log("about to read the file and upload to s3");
-    console.log();
     s3.putObject(params, function(err, file) {
      if (err) {
         alert(err);
@@ -48,7 +52,6 @@ function Upload() {
     };
 
     console.log("printing config");
-    console.log(config);
     const ReactS3Client = new S3(config);
 //    ReactS3Client.uploadFile(file, newFileName).then((data) => {
 //      console.log(data);
@@ -63,8 +66,6 @@ function Upload() {
 //    });
     console.log(newFileName);
     console.log(textInput);
-    console.log(config.bucketName);
-    console.log(config);
 //  };
   return (
     <>
