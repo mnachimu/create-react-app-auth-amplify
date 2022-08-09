@@ -49,7 +49,7 @@ function Upload() {
          }
         });
       });
-    }
+    };
 
     console.log("printing config");
     console.log(config);
@@ -69,7 +69,7 @@ function Upload() {
     console.log(textInput);
     console.log(config.bucketName);
     console.log(config);
-  };
+//  };
   return (
     <>
       <form className='upload-steps' onSubmit={handleClick}>
