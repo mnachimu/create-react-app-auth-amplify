@@ -5,6 +5,7 @@
   "dependencies": {
     "@aws-amplify/ui-react": "^1.2.6",
     "aws-amplify": "^4.3.14",
+    "buffer": "^6.0.3",
     "react": "^16.13.1",
     "react-aws-s3": "^1.5.0",
     "react-dom": "^16.13.1",
