@@ -5,6 +5,7 @@
   "dependencies": {
     "@aws-amplify/ui-react": "^1.2.6",
     "aws-amplify": "^4.3.14",
+    "aws-sdk": "^2.1190.0",
     "buffer": "^6.0.3",
     "react": "^16.13.1",
     "react-aws-s3": "^1.5.0",
@@ -29,5 +30,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "webpack": "^5.74.0"
+  }
 }
