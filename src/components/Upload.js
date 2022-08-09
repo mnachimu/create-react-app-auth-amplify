@@ -27,7 +27,7 @@ function Upload() {
     }).catch((err)=>{
         alert(err);
         console.log(err);
-    };
+    });
     console.log(newFileName);
     console.log(textInput);
     console.log(config.bucketName);
