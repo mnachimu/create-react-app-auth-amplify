@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import S3 from "react-aws-s3";
 var AWS = require('aws-sdk');
-var fs =  require('fs');
+//var fs =  require('fs');
 
 function Upload() {
   var s3 = new AWS.S3();
@@ -37,18 +37,14 @@ function Upload() {
     var myKey = 'text';
     console.log("about to read the file and upload to s3");
     console.log();
-    fs.readFile(file, function (err, data) {
-      if (err) { throw err; }
-        params = {Bucket: myBucket, Key: myKey, Body: data };
-        s3.putObject(params, function(err, data) {
-         if (err) {
-            alert(err);
-            console.log(err)
-         } else {
-            console.log("Successfully uploaded data to myBucket/myKey");
-         }
-        });
-      });
+    s3.putObject(params, function(err, file) {
+     if (err) {
+        alert(err);
+        console.log(err)
+     } else {
+        console.log("Successfully uploaded data to myBucket/myKey");
+     }
+    });
     };
 
     console.log("printing config");
