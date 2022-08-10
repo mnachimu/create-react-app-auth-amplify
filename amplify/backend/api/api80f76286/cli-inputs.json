@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "paths": {
+    "/pushdata": {
+      "name": "/pushdata",
+      "lambdaFunction": "pushdata",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
+    }
+  }
+}
